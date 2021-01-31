@@ -10,6 +10,9 @@
     "heroku-postbuild": "npm run build",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && rm -rf .next/ && npm install && npm run dev"
   },
+  "engines": {
+    "node": "14.x"
+  },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/data-grid": "^4.0.0-alpha.18",
