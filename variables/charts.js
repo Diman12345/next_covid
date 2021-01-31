@@ -23,8 +23,8 @@ var delays2 = 80,
 
 const dailySalesChart = {
   data: {
-    labels: ["M", "T", "W", "T", "F", "S", "S"],
-    series: [[12, 17, 7, 17, 23, 18, 38]],
+    labels: ["Sembuh", "T", "W", "T", "F", "S", "S"],
+    series: [[12, 17, 7, 17, 23, 18, 38], ],
   },
   options: {
     lineSmooth: Chartist.Interpolation.cardinal({
@@ -90,15 +90,54 @@ const emailsSubscriptionChart = {
       "Oct",
       "Nov",
       "Dec",
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "Mai",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
     ],
-    series: [[542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895]],
+    series: [{
+      label: 'My First dataset',
+      // backgroundColor: window.chartColors.red,
+      // borderColor: window.chartColors.red,
+      data: [
+        "221", "442","221", "442","221", "442","221", "442","221", "442","221", "442",
+      ],
+      fill: false,
+    }, {
+      label: 'My Second dataset',
+      fill: false,
+      // backgroundColor: window.chartColors.blue,
+      // borderColor: window.chartColors.blue,
+      data: [
+        "334","152","334","152","334","152","334","152","334","152","334","152",
+      ],
+    }, {
+      label: 'My Third dataset',
+      fill: false,
+      // backgroundColor: window.chartColors.blue,
+      // borderColor: window.chartColors.blue,
+      data: [
+        "334","152","334","152","334","152","334","152","334","152","334","152"
+      ],
+    }]
+    // series: [[542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895]],
+    // series2 : [[22, 43, 30, 80, 55, 43, 26, 44, 58, 10, 56, 89]],
   },
   options: {
     axisX: {
       showGrid: false,
     },
     low: 0,
-    high: 1000,
+    high: 500,
+    height:400,
     chartPadding: {
       top: 0,
       right: 5,
@@ -141,53 +180,66 @@ const emailsSubscriptionChart = {
 // #############################
 
 const completedTasksChart = {
+
+  type: 'pie',
   data: {
-    labels: ["12am", "3pm", "6pm", "9pm", "12pm", "3am", "6am", "9am"],
-    series: [[230, 750, 450, 300, 280, 240, 200, 190]],
+    datasets :[{
+      label: ["Data Covid 19"],
+      data: [230, 750, 450, 300, 280],
+    }],
+    labels: [
+      'Red',
+      'Orange',
+      'Yellow',
+      'Green',
+      'Blue'
+    ]
   },
   options: {
-    lineSmooth: Chartist.Interpolation.cardinal({
-      tension: 0,
-    }),
-    low: 0,
-    high: 1000, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
-    chartPadding: {
-      top: 0,
-      right: 0,
-      bottom: 0,
-      left: 0,
-    },
+    responsive: true,
+    // lineSmooth: Chartist.Interpolation.cardinal({
+    //   tension: 0,
+    // }),
+    // low: 0,
+    // high: 1000, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+    // chartPadding: {
+    //   top: 0,
+    //   right: 0,
+    //   bottom: 0,
+    //   left: 0,
+    // },
   },
-  animation: {
-    draw: function (data) {
-      if (data.type === "line" || data.type === "area") {
-        data.element.animate({
-          d: {
-            begin: 600,
-            dur: 700,
-            from: data.path
-              .clone()
-              .scale(1, 0)
-              .translate(0, data.chartRect.height())
-              .stringify(),
-            to: data.path.clone().stringify(),
-            easing: Chartist.Svg.Easing.easeOutQuint,
-          },
-        });
-      } else if (data.type === "point") {
-        data.element.animate({
-          opacity: {
-            begin: (data.index + 1) * delays,
-            dur: durations,
-            from: 0,
-            to: 1,
-            easing: "ease",
-          },
-        });
-      }
-    },
-  },
+  // animation: {
+  //   draw: function (data) {
+  //     if (data.type === "line" || data.type === "area") {
+  //       data.element.animate({
+  //         d: {
+  //           begin: 600,
+  //           dur: 700,
+  //           from: data.path
+  //             .clone()
+  //             .scale(1, 0)
+  //             .translate(0, data.chartRect.height())
+  //             .stringify(),
+  //           to: data.path.clone().stringify(),
+  //           easing: Chartist.Svg.Easing.easeOutQuint,
+  //         },
+  //       });
+  //     } else if (data.type === "point") {
+  //       data.element.animate({
+  //         opacity: {
+  //           begin: (data.index + 1) * delays,
+  //           dur: durations,
+  //           from: 0,
+  //           to: 1,
+  //           easing: "ease",
+  //         },
+  //       });
+  //     }
+  //   },
+  // },
 };
+
 
 module.exports = {
   dailySalesChart,

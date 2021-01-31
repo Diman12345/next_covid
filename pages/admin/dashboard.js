@@ -156,7 +156,7 @@ function Dashboard() {
       </GridContainer>
       <GridContainer>
         <GridItem xs={12} sm={12} md={4}>
-          <Card chart>
+          {/* <Card chart>
             <CardHeader color="success">
               <ChartistGraph
                 className="ct-chart"
@@ -180,9 +180,9 @@ function Dashboard() {
                 <AccessTime /> updated 4 minutes ago
               </div>
             </CardFooter>
-          </Card>
+          </Card> */}
         </GridItem>
-        <GridItem xs={12} sm={12} md={4}>
+        <GridItem xs={36} sm={36} md={12}>
           <Card chart>
             <CardHeader color="warning">
               <ChartistGraph
@@ -195,7 +195,7 @@ function Dashboard() {
               />
             </CardHeader>
             <CardBody>
-              <h4 className={classes.cardTitle}>Email Subscriptions</h4>
+              <h4 className={classes.cardTitle}>Grafik angka COVID 19 Indonesia</h4>
               <p className={classes.cardCategory}>Last Campaign Performance</p>
             </CardBody>
             <CardFooter chart>
@@ -205,17 +205,21 @@ function Dashboard() {
             </CardFooter>
           </Card>
         </GridItem>
-        <GridItem xs={12} sm={12} md={4}>
-          <Card chart>
-            <CardHeader color="dark">
-              <ChartistGraph
+      </GridContainer>
+      
+      <GridContainer>
+      {/* <GridItem xs={12} sm={12} md={4}>
+          <Card chart> 
+            <CardHeader color="dark"> */}
+            
+              {/* <ChartistGraph
                 className="ct-chart"
                 data={completedTasksChart.data}
-                type="Line"
-                options={completedTasksChart.options}
-                listener={completedTasksChart.animation}
-              />
-            </CardHeader>
+                type="pie" 
+                // options={completedTasksChart.options}
+                // listener={completedTasksChart.animation}
+               /> */}
+            {/* </CardHeader>
             <CardBody>
               <h4 className={classes.cardTitle}>Completed Tasks</h4>
               <p className={classes.cardCategory}>Last Campaign Performance</p>
@@ -226,7 +230,7 @@ function Dashboard() {
               </div>
             </CardFooter>
           </Card>
-        </GridItem>
+        </GridItem> */}
       </GridContainer>
       {/* <GridContainer> 
         <GridItem xs={12} sm={12} md={6}>

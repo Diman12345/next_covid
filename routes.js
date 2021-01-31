@@ -44,20 +44,20 @@ const dashboardRoutes = [
   },
   {
     path: "/table-list",
-    name: "Table List",
+    name: "Table Covid Indonesia",
     rtlName: "قائمة الجدول",
     icon: "content_paste",
 
     layout: "/admin",
   },
-  {
-    path: "/table-covid",
-    name: "Table Covid 19 Indonesia",
-    rtlName: "قائمة الجدول",
-    icon: "content_paste",
+  // {
+  //   path: "/table-covid",
+  //   name: "Table Covid 19 Indonesia",
+  //   rtlName: "قائمة الجدول",
+  //   icon: "content_paste",
 
-    layout: "/admin",
-  },
+  //   layout: "/admin",
+  // },
   {
     path: "/typography",
     name: "Typography",

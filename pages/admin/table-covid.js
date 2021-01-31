@@ -1,5 +1,5 @@
 import React from 'react'
-import data from 'components/data'
+// import data from 'components/data'
 
 const Home = () => (
   <div style={{ textAlign: 'center' }}>

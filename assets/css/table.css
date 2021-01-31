@@ -8,6 +8,8 @@ table {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+    width: 25%;
+    text-align: center;
   }
   
   tr:nth-child(even) {
