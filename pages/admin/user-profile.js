@@ -39,21 +39,27 @@ const styles = {
 
 const data = {
 	labels: [
-		'Red',
-		'Blue',
-		'Yellow'
+		'Jawa',
+		'Sumatera',
+    'Kalimantan',
+    'Sulawesi',
+    'Papua'
 	],
 	datasets: [{
-		data: [300, 50, 100],
+		data: [288.059,78.836,37.198,36.361,26.027],
 		backgroundColor: [
 		'#FF6384',
 		'#36A2EB',
-		'#FFCE56'
+    '#FFCE56',
+    '#FF7300',
+    '#52D726'
 		],
 		hoverBackgroundColor: [
 		'#FF6384',
 		'#36A2EB',
-		'#FFCE56'
+    '#FFCE56',
+    '#FF7300',
+    '#52D726'
 		]
 	}]
 };
@@ -67,7 +73,7 @@ function UserProfile() {
       <GridContainer>
         <GridItem xs={12} sm={12} md={8}>
           <Card>
-            <h2>Pie Covid</h2>
+            <h2>Agregasi Covid-19 di 5 Pulau besar Indonesia</h2>
             <Pie
               data = {data}
               width={150}
